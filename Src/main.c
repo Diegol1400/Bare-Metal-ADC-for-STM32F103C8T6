@@ -28,7 +28,7 @@ int main(void){
 	//start_converstion();
 
 	while(1){
-		//GPIOC->ODR |= LED_PIN;
+
 		pa1_adc_init();
 		start_converstion();
 		sensor_value = adc_read();
@@ -38,12 +38,6 @@ int main(void){
 		}else {
 			GPIOC->ODR |= LED_PIN;
 		}
-		 // La línea siguiente es para un retraso
-	    for(int i = 0; i<10000; i++){}
-
-		//start_converstion();
-		//sensor_value = adc_read();
-		//printf("Sensor value: %d \n \r", (int)sensor_value);
 
 	}
 }
